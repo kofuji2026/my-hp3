@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>APEX FIT | パーソナルトレーニングジム</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ========== NAV ========== -->
+  <header class="nav" id="nav">
+    <div class="nav__inner container">
+      <a href="#" class="nav__logo">APEX<span>FIT</span></a>
+      <nav class="nav__links">
+        <a href="#services">ABOUT</a>
+        <a href="#testimonials">RESULTS</a>
+        <a href="#pricing">PRICE</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a href="#pricing" class="btn btn--primary nav__cta">FREE TRIAL</a>
+      <button class="nav__hamburger" id="hamburger" aria-label="メニュー">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="hero">
+    <div class="hero__bg"></div>
+    <div class="hero__overlay"></div>
+    <div class="hero__content container">
+      <p class="hero__eyebrow">パーソナルトレーニングジム</p>
+      <h1 class="hero__title">あなただけの<br>ダミーテキストで、<br><span>理想の体</span>へ。</h1>
+      <p class="hero__sub">専属トレーナーが目標から逆算したプログラムを設計。<br>初心者から上級者まで、確かな結果をお約束します。</p>
+      <div class="hero__actions">
+        <a href="#pricing" class="btn btn--primary btn--lg">無料体験を申込む</a>
+        <a href="#services" class="btn btn--outline btn--lg">サービスを見る</a>
+      </div>
+      <div class="hero__stats">
+        <div class="hero__stat">
+          <span class="hero__stat-num">98<small>%</small></span>
+          <span class="hero__stat-label">顧客満足度</span>
+        </div>
+        <div class="hero__stat-divider"></div>
+        <div class="hero__stat">
+          <span class="hero__stat-num">1,200<small>+</small></span>
+          <span class="hero__stat-label">指導実績</span>
+        </div>
+        <div class="hero__stat-divider"></div>
+        <div class="hero__stat">
+          <span class="hero__stat-num">10<small>年</small></span>
+          <span class="hero__stat-label">トレーナー経験</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SERVICES ========== -->
+  <section class="section services" id="services">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">SERVICE</p>
+        <h2 class="section-title">選ばれる4つの理由</h2>
+        <p class="section-sub">科学的アプローチと丁寧なサポートで、あなたのゴールに最短距離でたどり着きます。</p>
+      </div>
+      <div class="services__grid">
+        <div class="service-card">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="2.5"/>
+              <path d="M14 24h4m12 0h4M18 24v-6a6 6 0 0112 0v6M18 24v6a6 6 0 0012 0v-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="service-card__title">完全オーダーメイドプログラム</h3>
+          <p class="service-card__text">体力測定・姿勢分析・ライフスタイルのヒアリングをもとに、あなただけのメニューを作成します。</p>
+        </div>
+        <div class="service-card">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="14" r="7" stroke="currentColor" stroke-width="2.5"/>
+              <path d="M8 42c0-8.837 7.163-16 16-16s16 7.163 16 16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M30 30l3 3-3 3" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3 class="service-card__title">国家資格保有トレーナー</h3>
+          <p class="service-card__text">全スタッフが健康運動指導士・NSCA-CPT などの資格を保有。安全で効果的なトレーニングを提供します。</p>
+        </div>
+        <div class="service-card">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M24 6v36M6 24h36" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M12 12l24 24M36 12L12 36" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-dasharray="3 5"/>
+            </svg>
+          </div>
+          <h3 class="service-card__title">食事・栄養サポート</h3>
+          <p class="service-card__text">トレーニングと食事は車の両輪。管理栄養士監修の食事アドバイスで、より早く・より確かな結果を出します。</p>
+        </div>
+        <div class="service-card">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="6" y="10" width="36" height="28" rx="4" stroke="currentColor" stroke-width="2.5"/>
+              <path d="M6 18h36M16 10v8M32 10v8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <circle cx="16" cy="28" r="2" fill="currentColor"/>
+              <circle cx="24" cy="28" r="2" fill="currentColor"/>
+              <circle cx="32" cy="28" r="2" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3 class="service-card__title">24時間LINEサポート</h3>
+          <p class="service-card__text">セッション外の疑問もLINEで即対応。モチベーション維持から体調管理まで、いつでもそばにいます。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TESTIMONIALS ========== -->
+  <section class="section testimonials" id="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">VOICE</p>
+        <h2 class="section-title">お客様の声</h2>
+        <p class="section-sub">実際にご利用いただいたお客様のリアルな声をご紹介します。</p>
+      </div>
+      <div class="testimonials__grid">
+
+        <div class="testimonial-card">
+          <div class="testimonial-card__stars">★★★★★</div>
+          <p class="testimonial-card__text">「3ヶ月で体脂肪率が18%から12%に！食事制限なしでここまで変われるとは思っていませんでした。毎週のセッションがとにかく楽しく、気づいたら目標を達成していました。」</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar" aria-label="田中 健太">健</div>
+            <div>
+              <p class="testimonial-card__name">田中 健太 様</p>
+              <p class="testimonial-card__meta">30代・会社員 / 3ヶ月通い</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-card__stars">★★★★★</div>
+          <p class="testimonial-card__text">「産後ダイエットで入会しました。体型だけでなく姿勢も改善されて、腰痛が全くなくなりました。子育て中でも通いやすいスケジュールに対応してくれて本当に助かっています。」</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar testimonial-card__avatar--green" aria-label="佐藤 美咲">美</div>
+            <div>
+              <p class="testimonial-card__name">佐藤 美咲 様</p>
+              <p class="testimonial-card__meta">30代・主婦 / 6ヶ月通い</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-card__stars">★★★★★</div>
+          <p class="testimonial-card__text">「ジムに何度通っても続かなかった私が、もう1年半継続できています。トレーナーさんとの関係がとても良くて、毎週の予約が待ち遠しいです。体重は15kg減りました！」</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar testimonial-card__avatar--teal" aria-label="山本 拓也">山</div>
+            <div>
+              <p class="testimonial-card__name">山本 拓也 様</p>
+              <p class="testimonial-card__meta">40代・自営業 / 18ヶ月通い</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PRICING ========== -->
+  <section class="section pricing" id="pricing">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">PRICE</p>
+        <h2 class="section-title">料金プラン</h2>
+        <p class="section-sub">目標やライフスタイルに合わせてプランをお選びいただけます。まずは無料体験からどうぞ。</p>
+      </div>
+      <div class="pricing__grid">
+
+        <div class="pricing-card">
+          <div class="pricing-card__header">
+            <p class="pricing-card__name">ライト</p>
+            <p class="pricing-card__desc">週1回・気軽にスタート</p>
+          </div>
+          <div class="pricing-card__price">
+            <span class="pricing-card__currency">¥</span>
+            <span class="pricing-card__amount">22,000</span>
+            <span class="pricing-card__period">/月</span>
+          </div>
+          <ul class="pricing-card__features">
+            <li class="pricing-card__feature pricing-card__feature--on">月4回のセッション（50分）</li>
+            <li class="pricing-card__feature pricing-card__feature--on">オーダーメイドプログラム作成</li>
+            <li class="pricing-card__feature pricing-card__feature--on">LINEサポート（平日）</li>
+            <li class="pricing-card__feature pricing-card__feature--off">食事・栄養アドバイス</li>
+            <li class="pricing-card__feature pricing-card__feature--off">ボディスキャン測定</li>
+          </ul>
+          <a href="#" class="btn btn--outline btn--full">このプランで申込む</a>
+        </div>
+
+        <div class="pricing-card pricing-card--featured">
+          <div class="pricing-card__badge">人気 No.1</div>
+          <div class="pricing-card__header">
+            <p class="pricing-card__name">スタンダード</p>
+            <p class="pricing-card__desc">週2回・着実に変わりたい方へ</p>
+          </div>
+          <div class="pricing-card__price">
+            <span class="pricing-card__currency">¥</span>
+            <span class="pricing-card__amount">38,000</span>
+            <span class="pricing-card__period">/月</span>
+          </div>
+          <ul class="pricing-card__features">
+            <li class="pricing-card__feature pricing-card__feature--on">月8回のセッション（50分）</li>
+            <li class="pricing-card__feature pricing-card__feature--on">オーダーメイドプログラム作成</li>
+            <li class="pricing-card__feature pricing-card__feature--on">LINEサポート（24時間）</li>
+            <li class="pricing-card__feature pricing-card__feature--on">食事・栄養アドバイス</li>
+            <li class="pricing-card__feature pricing-card__feature--off">ボディスキャン測定</li>
+          </ul>
+          <a href="#" class="btn btn--primary btn--full">このプランで申込む</a>
+        </div>
+
+        <div class="pricing-card">
+          <div class="pricing-card__header">
+            <p class="pricing-card__name">プレミアム</p>
+            <p class="pricing-card__desc">週3回・本気で変わりたい方へ</p>
+          </div>
+          <div class="pricing-card__price">
+            <span class="pricing-card__currency">¥</span>
+            <span class="pricing-card__amount">56,000</span>
+            <span class="pricing-card__period">/月</span>
+          </div>
+          <ul class="pricing-card__features">
+            <li class="pricing-card__feature pricing-card__feature--on">月12回のセッション（60分）</li>
+            <li class="pricing-card__feature pricing-card__feature--on">オーダーメイドプログラム作成</li>
+            <li class="pricing-card__feature pricing-card__feature--on">LINEサポート（24時間）</li>
+            <li class="pricing-card__feature pricing-card__feature--on">食事・栄養アドバイス</li>
+            <li class="pricing-card__feature pricing-card__feature--on">ボディスキャン測定（月1回）</li>
+          </ul>
+          <a href="#" class="btn btn--outline btn--full">このプランで申込む</a>
+        </div>
+
+      </div>
+      <p class="pricing__note">※ 入会金 ¥10,000（初回のみ）。無料体験セッション実施中。まずはお気軽にお問い合わせください。</p>
+    </div>
+  </section>
+
+  <!-- ========== FAQ ========== -->
+  <section class="section faq" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">FAQ</p>
+        <h2 class="section-title">よくある質問</h2>
+        <p class="section-sub">ご入会前によく寄せられるご質問をまとめました。</p>
+      </div>
+      <div class="faq__list">
+
+        <div class="faq-item">
+          <button class="faq-item__q" aria-expanded="false">
+            <span>運動経験がなくても大丈夫ですか？</span>
+            <span class="faq-item__icon"></span>
+          </button>
+          <div class="faq-item__a">
+            <p>はい、まったく問題ありません。当ジムのお客様の約60%が運動未経験またはブランク10年以上の方です。体力測定からスタートし、無理のないペースでプログラムを組みますので安心してご参加ください。</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__q" aria-expanded="false">
+            <span>無料体験はどのような内容ですか？</span>
+            <span class="faq-item__icon"></span>
+          </button>
+          <div class="faq-item__a">
+            <p>約60分のカウンセリング＋体験トレーニングです。目標のヒアリング・姿勢チェック・体力測定を行い、その場でプログラムの方向性をご提案します。勧誘は一切ありませんので、気軽にご体験ください。</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__q" aria-expanded="false">
+            <span>トレーニングウェアや道具は必要ですか？</span>
+            <span class="faq-item__icon"></span>
+          </button>
+          <div class="faq-item__a">
+            <p>動きやすい服装とシューズをご用意ください。タオル・ウォーターボトルはジムでも無料貸し出し・販売しております。着替えのロッカーとシャワールームも完備しています。</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__q" aria-expanded="false">
+            <span>セッションの予約・変更はどうすればできますか？</span>
+            <span class="faq-item__icon"></span>
+          </button>
+          <div class="faq-item__a">
+            <p>LINE または専用アプリから24時間いつでも予約・変更が可能です。前日18時までのご連絡であれば無料で振替対応いたします。</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__q" aria-expanded="false">
+            <span>途中でプランを変更することはできますか？</span>
+            <span class="faq-item__icon"></span>
+          </button>
+          <div class="faq-item__a">
+            <p>もちろんです。毎月末までにお申し出いただければ、翌月からプランの変更が可能です。目標の進捗や生活スタイルの変化に合わせて柔軟にご対応します。</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__q" aria-expanded="false">
+            <span>産後や怪我・持病がある場合でも通えますか？</span>
+            <span class="faq-item__icon"></span>
+          </button>
+          <div class="faq-item__a">
+            <p>はい。ご入会時に詳しくヒアリングし、医師の指示や身体の状態を考慮したプログラムを作成します。産後リハビリ・腰痛改善・術後のリハビリなど多数の実績があります。不安な点はカウンセリング時にお気軽にご相談ください。</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CTA BANNER ========== -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2 class="cta-banner__title">まずは無料体験から始めてみませんか？</h2>
+      <p class="cta-banner__sub">カウンセリング＋体験トレーニング 60分 完全無料。勧誘は一切ありません。</p>
+      <a href="#pricing" class="btn btn--white btn--lg">今すぐ無料体験を申込む</a>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="footer__inner container">
+      <div class="footer__brand">
+        <a href="#" class="footer__logo">APEX<span>FIT</span></a>
+        <p class="footer__tagline">あなただけのトレーニングで、理想の体へ。</p>
+      </div>
+      <nav class="footer__nav">
+        <div class="footer__nav-col">
+          <p class="footer__nav-heading">メニュー</p>
+          <a href="#services">サービス紹介</a>
+          <a href="#testimonials">お客様の声</a>
+          <a href="#pricing">料金プラン</a>
+          <a href="#faq">よくある質問</a>
+        </div>
+        <div class="footer__nav-col">
+          <p class="footer__nav-heading">アクセス</p>
+          <p class="footer__nav-text">〒150-0001<br>東京都渋谷区神宮前1-1-1<br>APEXビル 2F</p>
+          <p class="footer__nav-text">TEL: 03-0000-0000</p>
+          <p class="footer__nav-text">営業時間: 7:00 – 22:00（年中無休）</p>
+        </div>
+      </nav>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; 2025 APEX FIT. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // ===== Live Reload (開発用) =====
+    (function () {
+      let lastHash = null;
+      async function checkReload() {
+        try {
+          const res = await fetch('/_live', { cache: 'no-store' });
+          const { hash } = await res.json();
+          if (lastHash === null) { lastHash = hash; return; }
+          if (hash !== lastHash) { location.reload(); }
+        } catch (_) {}
+      }
+      setInterval(checkReload, 800);
+    })();
+
+    // ===== Nav scroll effect =====
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('nav--scrolled', window.scrollY > 40);
+    });
+
+    // ===== Hamburger menu =====
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.querySelector('.nav__links');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      navLinks.classList.toggle('open');
+    });
+    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      navLinks.classList.remove('open');
+    }));
+
+    // ===== FAQ accordion =====
+    document.querySelectorAll('.faq-item__q').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const isOpen = btn.getAttribute('aria-expanded') === 'true';
+        // close all
+        document.querySelectorAll('.faq-item__q').forEach(b => {
+          b.setAttribute('aria-expanded', 'false');
+          b.closest('.faq-item').classList.remove('open');
+        });
+        // open clicked (unless it was already open)
+        if (!isOpen) {
+          btn.setAttribute('aria-expanded', 'true');
+          btn.closest('.faq-item').classList.add('open');
+        }
+      });
+    });
+
+    // ===== Scroll reveal =====
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.service-card, .testimonial-card, .pricing-card, .faq-item').forEach(el => {
+      el.classList.add('reveal');
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
