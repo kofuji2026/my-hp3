@@ -32,7 +32,7 @@ export default async function handler(req, res) {
     const systemPrompt = 'あなたは親切なアシスタントです。ユーザーの質問に日本語で丁寧に答えてください。';
 
     const body = {
-      model: 'claude-3-haiku-20240307',
+      model: 'claude-3-5-haiku-latest',
       max_tokens: 800,
       system: systemPrompt,
       messages: messages,
