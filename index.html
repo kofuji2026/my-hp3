@@ -353,6 +353,42 @@
     </div>
   </footer>
 
+  <!-- ========== AI CHAT WIDGET ========== -->
+  <div class="chat-widget" id="chatWidget">
+    <button class="chat-toggle" id="chatToggle" aria-label="AIアシスタント">
+      <svg class="chat-toggle__open" viewBox="0 0 24 24" fill="none">
+        <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <svg class="chat-toggle__close" viewBox="0 0 24 24" fill="none">
+        <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+      </svg>
+    </button>
+    <div class="chat-window" id="chatWindow" aria-hidden="true">
+      <div class="chat-header">
+        <div class="chat-header__info">
+          <div class="chat-header__avatar">AI</div>
+          <div>
+            <p class="chat-header__name">APEX FIT アシスタント</p>
+            <p class="chat-header__status">● オンライン</p>
+          </div>
+        </div>
+      </div>
+      <div class="chat-messages" id="chatMessages">
+        <div class="chat-message chat-message--bot">
+          <div class="chat-bubble">こんにちは！APEX FITのAIアシスタントです。料金プランや無料体験など、お気軽にご質問ください 😊</div>
+        </div>
+      </div>
+      <div class="chat-input-area">
+        <input type="text" class="chat-input" id="chatInput" placeholder="メッセージを入力..." maxlength="500" autocomplete="off" />
+        <button class="chat-send" id="chatSend" aria-label="送信">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
   <script>
     // ===== Live Reload (開発用) =====
     (function () {
@@ -413,6 +449,72 @@
       el.classList.add('reveal');
       observer.observe(el);
     });
+
+    // ===== AI Chat Widget =====
+    (function () {
+      const widget   = document.getElementById('chatWidget');
+      const toggle   = document.getElementById('chatToggle');
+      const win      = document.getElementById('chatWindow');
+      const msgs     = document.getElementById('chatMessages');
+      const input    = document.getElementById('chatInput');
+      const sendBtn  = document.getElementById('chatSend');
+      let history    = [];
+      let isOpen     = false;
+      let isSending  = false;
+
+      function openChat()  { isOpen = true;  widget.classList.add('chat-widget--open');    win.setAttribute('aria-hidden', 'false'); setTimeout(() => input.focus(), 50); }
+      function closeChat() { isOpen = false; widget.classList.remove('chat-widget--open'); win.setAttribute('aria-hidden', 'true'); }
+      toggle.addEventListener('click', () => isOpen ? closeChat() : openChat());
+
+      function addMsg(text, role) {
+        const d = document.createElement('div');
+        d.className = 'chat-message chat-message--' + (role === 'user' ? 'user' : 'bot');
+        d.innerHTML = '<div class="chat-bubble">' + text.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/\n/g,'<br>') + '</div>';
+        msgs.appendChild(d);
+        msgs.scrollTop = msgs.scrollHeight;
+        return d;
+      }
+
+      function showTyping() {
+        const d = document.createElement('div');
+        d.className = 'chat-message chat-message--bot';
+        d.innerHTML = '<div class="chat-bubble chat-typing"><span></span><span></span><span></span></div>';
+        msgs.appendChild(d);
+        msgs.scrollTop = msgs.scrollHeight;
+        return d;
+      }
+
+      async function send() {
+        const text = input.value.trim();
+        if (!text || isSending) return;
+        isSending = true; sendBtn.disabled = true; input.value = '';
+        addMsg(text, 'user');
+        const typing = showTyping();
+        try {
+          const res  = await fetch('/api/chat', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ message: text, history: history.slice(-10) })
+          });
+          const data = await res.json();
+          typing.remove();
+          if (data.error) {
+            addMsg('エラー: ' + data.error, 'bot');
+          } else {
+            history.push({ role: 'user', content: text });
+            history.push({ role: 'assistant', content: data.reply });
+            addMsg(data.reply, 'bot');
+          }
+        } catch (_) {
+          typing.remove();
+          addMsg('通信エラーが発生しました。しばらくしてから再度お試しください。', 'bot');
+        }
+        isSending = false; sendBtn.disabled = false; input.focus();
+      }
+
+      sendBtn.addEventListener('click', send);
+      input.addEventListener('keydown', e => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); send(); } });
+    })();
   </script>
 </body>
 </html>
