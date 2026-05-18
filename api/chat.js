@@ -32,7 +32,7 @@ export default async function handler(req, res) {
     const systemPrompt = 'あなたは親切なアシスタントです。ユーザーの質問に日本語で丁寧に答えてください。';
 
     const body = {
-      model: "claude-3-5-sonnet-latest",
+      model: "claude-3-5-sonnet-20241022",
       max_tokens: 800,
       system: systemPrompt,
       messages: messages,
